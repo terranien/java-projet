@@ -26,7 +26,9 @@ public void setDico(String dico[][]) {
 
 	
 
-
+/*
+ * test commit
+ */
 /*try{
 InputStream flux=new FileInputStream("test.txt"); 
 InputStreamReader lecture=new InputStreamReader(flux);
