@@ -9,6 +9,7 @@ import java.net.UnknownHostException;
 
 
 public class Client extends Socket {
+private int numport;
 
 	public Client() {
 		// TODO Auto-generated constructor stub
@@ -53,6 +54,14 @@ public class Client extends Socket {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
+	}
+
+	public int getNumport() {
+		return numport;
+	}
+
+	public void setNumport(int numport) {
+		this.numport = numport;
 	}
 
 }
