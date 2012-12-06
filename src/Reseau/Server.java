@@ -43,4 +43,12 @@ public class Server extends ServerSocket {
 		this.adresse = adresse;
 	}
 
+	public int getNumport() {
+		return numport;
+	}
+
+	public void setNumport(int numport) {
+		this.numport = numport;
+	}
+
 }
