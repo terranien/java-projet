@@ -27,6 +27,10 @@ import Classes.Joueur;
 * LEGALLY FOR ANY CORPORATE OR COMMERCIAL PURPOSE.
 */
 public class Accueil extends javax.swing.JFrame {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 4634064151056960285L;
 	private JButton jButton1;
 	private JButton Jeux;
 	private JTextField Pseudo;
@@ -84,7 +88,7 @@ public class Accueil extends javax.swing.JFrame {
 				Pseudo.setText("pseudo");
 			    //Joueur.setPseudo(Pseudo);
 				String pseudo= new String();
-				pseudo= JOptionPane.showInputDialog("null, entrer le pseudo du joueur");
+				pseudo= JOptionPane.showInputDialog("entrer le pseudo du joueur");
 			}
 
 			setSize(500, 500);

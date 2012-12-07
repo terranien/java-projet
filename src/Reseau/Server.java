@@ -2,10 +2,12 @@ package Reseau;
 import java.io.IOException;
 import java.net.InetAddress;
 import java.net.ServerSocket;
+import java.net.Socket;
 
 
 public class Server extends ServerSocket {
 	private int numport;
+	private Socket sock;
 	private int adresse;
 
 	public Server() throws IOException {
@@ -13,8 +15,9 @@ public class Server extends ServerSocket {
 	}
 
 	public Server(int arg0) throws IOException {
-		super(arg0);
-		// TODO Auto-generated constructor stub
+		super(1234);
+		final Server serv= this;
+		Thread t = new Thread();
 	}
 
 	public Server(int arg0, int arg1) throws IOException {

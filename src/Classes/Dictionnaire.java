@@ -26,7 +26,10 @@ public void setDico(String dico[][]) {
 
 /**
  * extrait de code tiré de http://www.developpez.net/forums/d1214517/java/general-java/debuter/lire-fichier-texte-java/
+ * @return un tableau avec les mots récupérés du document texte.
+ * 
  */
+
 public void importmots(){
 try{
 	InputStream flux=new FileInputStream("../bin/dictionnaire.txt"); 

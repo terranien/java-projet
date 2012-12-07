@@ -1,5 +1,6 @@
 package Reseau;
 import java.io.IOException;
+import java.io.ObjectOutputStream;
 import java.net.InetAddress;
 import java.net.Proxy;
 import java.net.Socket;
@@ -7,16 +8,18 @@ import java.net.SocketException;
 import java.net.SocketImpl;
 import java.net.UnknownHostException;
 
+import Classes.Joueur;
+
 
 public class Client extends Socket {
 private int numport;
-
+ObjectOutputStream oos;
 	public Client() {
 		// TODO Auto-generated constructor stub
 	}
 
-	public Client(Proxy arg0) {
-		super(arg0);
+	public Client(Proxy arg0) throws UnknownHostException, IOException {
+		super("127.0.0.1",2009);
 		// TODO Auto-generated constructor stub
 	}
 
@@ -52,7 +55,7 @@ private int numport;
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		Client joueur = new Client();
 
 	}
 

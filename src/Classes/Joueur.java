@@ -12,7 +12,7 @@ public class Joueur {
 
 	public void setPseudo(String pseudo) {
 		this.pseudo = pseudo;
-		pseudo = JOptionPane.showInputDialog("null, entrer le pseudo du joueur");
+		pseudo = JOptionPane.showInputDialog("entrer le pseudo du joueur");
 	}
 
 	public static void setPseudo(JTextField pseudo2) {
