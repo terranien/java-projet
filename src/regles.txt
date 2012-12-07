@@ -1,0 +1,19 @@
+Règles du jeu du pendu:
+
+L'objectif du jeu est de découvrir un mot en devinant les lettres qui le composent.
+Chaque joueur disposera du même mot à découvrir le plus rapidement possible.
+Si le joueur découvre une lettre qui correspond au mot, celle-ci sera affichée 
+et placée au bon endroit dans le mot.
+Si la lettre est fausse, un croquis représentant un corps humain pendu sera peu à
+peu formé. Dès que le corps entier est formé, le joueur perd.
+
+
+Score:
+
+Chaque mot représente un nombre de points. Chaque joueur qui trouve le mot gagne 
+le nombre de points du mot.
+
+
+Vainqueur:
+
+Le vainqueur est le joueur ayant trouvé le maximum de mots et donc ayant le maximum de points. 

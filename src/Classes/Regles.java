@@ -1,4 +1,6 @@
 package Classes;
+import java.io.*;
+
 
 public class Regles {
 
