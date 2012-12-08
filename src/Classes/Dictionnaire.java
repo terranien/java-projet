@@ -5,9 +5,11 @@ import java.io.BufferedReader;
 import java.io.FileInputStream;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.util.StringTokenizer;
 
 public class Dictionnaire {
 private int compteur;
+private int nbligne;
 
 private String Dico[] [];
 
@@ -40,6 +42,38 @@ try{
 	while ((ligne=buff.readLine())!=null){
 		System.out.println(ligne);
 	}
+	// on lit le nombre de ligne du tableau a faire trouvé sur http://www.infos-du-net.com/forum/268172-21-resolu-classer-fichier-tableau-java
+	nbligne=1;
+	while(buff.ready()){
+
+		buff.readLine();
+		}
+
+		nbligne++;
+		// on écrit dans le fichier trouvé sur http://www.infos-du-net.com/forum/268172-21-resolu-classer-fichier-tableau-java
+		int nbDonnees = 0;
+		String[][] dico = new String[nbligne][nbDonnees];
+		 while(buff.ready()){
+
+	    		String line = buff.readLine();
+
+				StringTokenizer tok = new StringTokenizer(line, ";");
+
+				for(int i = 0; i<nbligne; i++){
+
+					for(int j=0; j<nbDonnees; j++){
+
+						if(tok.hasMoreTokens()){
+
+							dico[i][j]=tok.nextToken();
+
+						}
+
+					}
+
+				}
+		 }
+	
 	buff.close(); 
 	}		
 	catch (Exception e){
@@ -48,6 +82,12 @@ try{
 
 
 
+}
+public int getNbligne() {
+	return nbligne;
+}
+public void setNbligne(int nbligne) {
+	this.nbligne = nbligne;
 }
 }
 
