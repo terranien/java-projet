@@ -52,6 +52,7 @@ try{
 		nbligne++;
 		// on écrit dans le fichier trouvé sur http://www.infos-du-net.com/forum/268172-21-resolu-classer-fichier-tableau-java
 		int nbDonnees = 0;
+		nbDonnees++;
 		String[][] dico = new String[nbligne][nbDonnees];
 		 while(buff.ready()){
 
