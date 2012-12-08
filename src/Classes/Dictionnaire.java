@@ -3,8 +3,12 @@ package Classes;
 
 import java.io.BufferedReader;
 import java.io.FileInputStream;
+import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.io.LineNumberReader;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.StringTokenizer;
 
 public class Dictionnaire {
@@ -83,6 +87,23 @@ public void importmots(){
 
 
 
+}
+public static List<String> adresses(String fileName) throws IOException {
+	 
+	// Note : on devrait spécifier le Charset !!!!
+	LineNumberReader reader = new LineNumberReader(
+			new InputStreamReader(new FileInputStream(fileName)));
+	try {
+		ArrayList<String> list = new ArrayList<String>();
+		String line;
+		while ( (line=reader.readLine()) != null) {
+			list.add(line);
+		}
+		list.trimToSize();
+		return list;
+	} finally {
+		reader.close();
+	}
 }
 public int getNbligne() {
 	return nbligne;
