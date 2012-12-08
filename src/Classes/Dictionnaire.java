@@ -88,7 +88,7 @@ public void importmots(){
 
 
 }
-public static List<String> adresses(String fileName) throws IOException {
+public static List<String> adresses(String fileName) throws IOException {// tiré de http://www.developpez.net/forums/d1052383/java/general-java/stocker-fichier-text-tableau-string/
 	 
 	// Note : on devrait spécifier le Charset !!!!
 	LineNumberReader reader = new LineNumberReader(
