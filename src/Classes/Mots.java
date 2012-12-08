@@ -3,6 +3,7 @@ package Classes;
 public class Mots {
 private String tabmot[] [];
 private int compte_point;
+private int nbreerreur;
 
 public String[][] getTabmot() {
 	return tabmot;
@@ -22,6 +23,14 @@ public int getCompte_point() {
 public void setCompte_point(int compte_point) {
 	this.compte_point = compte_point;
 	
+}
+
+public int getNbreerreur() {
+	return nbreerreur;
+}
+
+public void setNbreerreur(int nbreerreur) {
+	this.nbreerreur = nbreerreur;
 }
 
 
