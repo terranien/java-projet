@@ -17,6 +17,7 @@ public class Server extends ServerSocket {
 	public Server(int arg0) throws IOException {
 		super(1234);
 		final Server serv= this;
+		@SuppressWarnings("unused")
 		Thread t = new Thread();
 	}
 
