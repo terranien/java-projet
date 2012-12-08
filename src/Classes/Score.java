@@ -15,12 +15,9 @@ public void setScore(int score) {
  * 
  * @param nbreerreur est le nombre d'erreur commise par le joueur.
  */
-public void inpoint(int nbreerreur){
-	switch ( nbreerreur){
-	case 0:
-		this.setPo(this.getPo() + 50);
-		
-	}
+public void inpoint(boolean trouve){
+	if (trouve= true) po+=100;
+	else po+=0;
 }
 
 public int getPo() {

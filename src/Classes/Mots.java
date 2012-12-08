@@ -3,7 +3,7 @@ package Classes;
 public class Mots {
 private String tabmot[] [];
 private int compte_point;
-private int nbreerreur;
+ private boolean trouve ;
 
 public String[][] getTabmot() {
 	return tabmot;
@@ -25,12 +25,14 @@ public void setCompte_point(int compte_point) {
 	
 }
 
-public int getNbreerreur() {
-	return nbreerreur;
+
+
+public boolean isTrouve() {
+	return trouve;
 }
 
-public void setNbreerreur(int nbreerreur) {
-	this.nbreerreur = nbreerreur;
+public void setTrouve(boolean trouve) {
+	this.trouve = trouve;
 }
 
 
