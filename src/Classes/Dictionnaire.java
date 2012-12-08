@@ -11,6 +11,7 @@ import java.util.List;
 import java.util.StringTokenizer;
 
 public class Dictionnaire {
+private static final List<String> list = null;
 private int compteur;
 private int nbligne;
 
@@ -87,7 +88,7 @@ public void importmots(){
 
 
 }
-public static List<String> adresses(String fileName) throws IOException {// tiré de http://www.developpez.net/forums/d1052383/java/general-java/stocker-fichier-text-tableau-string/
+public static ArrayList<String> adresses(String fileName) throws IOException {// tiré de http://www.developpez.net/forums/d1052383/java/general-java/stocker-fichier-text-tableau-string/
 	 
 	// Note : on devrait spécifier le Charset !!!!
 	LineNumberReader reader = new LineNumberReader(
@@ -102,6 +103,7 @@ public static List<String> adresses(String fileName) throws IOException {// tiré
 		return list;
 	} finally {
 		reader.close();
+		//return list.toArray(new String[list.size()]);
 	}
 }
 public int getNbligne() {
