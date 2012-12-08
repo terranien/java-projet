@@ -34,7 +34,7 @@ public void setDico(String dico[][]) {
  */
 
 public void importmots(){
-try{
+/*try{
 	InputStream flux=new FileInputStream("../bin/dictionnaire.txt"); 
 	InputStreamReader lecture=new InputStreamReader(flux);
 	BufferedReader buff=new BufferedReader(lecture);
@@ -79,7 +79,7 @@ try{
 	}		
 	catch (Exception e){
 	System.out.println(e.toString());
-	}	
+	}	*/
 
 
 
