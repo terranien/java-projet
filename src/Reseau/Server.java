@@ -55,4 +55,12 @@ public class Server extends ServerSocket {
 		this.numport = numport;
 	}
 
+	public Socket getSock() {
+		return sock;
+	}
+
+	public void setSock(Socket sock) {
+		this.sock = sock;
+	}
+
 }
