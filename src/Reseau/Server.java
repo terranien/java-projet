@@ -67,6 +67,7 @@ public class Server extends ServerSocket implements Runnable {
 
 	@Override
 	public void run() {
+		@SuppressWarnings("unused")
 		Thread choixmo = new Thread();
 		//((Joueur) choixmo).choixmots();
 	}
