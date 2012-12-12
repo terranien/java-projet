@@ -4,6 +4,8 @@ import java.net.InetAddress;
 import java.net.ServerSocket;
 import java.net.Socket;
 
+import Classes.Joueur;
+
 
 public class Server extends ServerSocket implements Runnable {
 	private int numport;
@@ -66,8 +68,9 @@ public class Server extends ServerSocket implements Runnable {
 
 	@Override
 	public void run() {
-		@SuppressWarnings("unused")
-		Thread choixmo = new Thread();
+		
+		String joueur1 = "terra";
+		Joueur choixmo = new Joueur(joueur1);
 		//((Joueur) choixmo).choixmots();
 	}
 

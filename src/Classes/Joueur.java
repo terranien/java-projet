@@ -3,9 +3,13 @@ package Classes;
 import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 
-public class Joueur {
+public class Joueur extends Mots {
 	private String pseudo;
 	private String Mot_choisi;
+
+	public Joueur(Object joueur1) {
+		// TODO Auto-generated constructor stub
+	}
 
 	public String getPseudo() {
 		return pseudo;

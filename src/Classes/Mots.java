@@ -1,6 +1,6 @@
 package Classes;
 
-public class Mots {
+public class Mots  {
 private String tabmot[] [];
 private int compte_point;
  private boolean trouve ;
