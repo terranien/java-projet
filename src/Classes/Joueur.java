@@ -5,6 +5,7 @@ import javax.swing.JTextField;
 
 public class Joueur {
 	private String pseudo;
+	private String Mot_choisi;
 
 	public String getPseudo() {
 		return pseudo;
@@ -19,10 +20,22 @@ public class Joueur {
 		// TODO Auto-generated method stub
 		
 	}
-
+public String choixmots(){
+	Mot_choisi= JOptionPane.showInputDialog("entrer le mots que vous voulez voir deviner par l'autre joueur");
+	return Mot_choisi;
+	
+}
 	@Override
 	public String  toString() {
 		return "Joueur [pseudo=" + pseudo + "]";
+	}
+
+	public String getMot_choisi() {
+		return Mot_choisi;
+	}
+
+	public void setMot_choisi(String mot_choisi) {
+		Mot_choisi = mot_choisi;
 	}
 
 	

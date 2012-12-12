@@ -4,8 +4,10 @@ import java.net.InetAddress;
 import java.net.ServerSocket;
 import java.net.Socket;
 
+import Classes.Joueur;
 
-public class Server extends ServerSocket {
+
+public class Server extends ServerSocket implements Runnable {
 	private int numport;
 	private Socket sock;
 	private int adresse;
@@ -20,6 +22,7 @@ public class Server extends ServerSocket {
 		@SuppressWarnings("unused")
 		Thread t = new Thread();
 	}
+	
 
 	public Server(int arg0, int arg1) throws IOException {
 		super(arg0, arg1);
@@ -35,8 +38,7 @@ public class Server extends ServerSocket {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+		//Joueur j1= new Joueur ;
 	}
 
 	public int getAdresse() {
@@ -63,4 +65,11 @@ public class Server extends ServerSocket {
 		this.sock = sock;
 	}
 
-}
+	@Override
+	public void run() {
+		Thread choixmo = new Thread();
+		//((Joueur) choixmo).choixmots();
+	}
+
+	
+	}
