@@ -70,6 +70,7 @@ public class Server extends ServerSocket implements Runnable {
 	public void run() {
 		
 		String joueur1 = "terra";
+		
 		Joueur choixmo = new Joueur(joueur1);
 		//((Joueur) choixmo).choixmots();
 	}

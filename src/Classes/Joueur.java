@@ -7,7 +7,11 @@ public class Joueur extends Mots {
 	private String pseudo;
 	private String Mot_choisi;
 
-	public Joueur(Object joueur1) {
+	public Joueur() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public Joueur(String joueur1) {
 		// TODO Auto-generated constructor stub
 	}
 
