@@ -4,8 +4,6 @@ import java.net.InetAddress;
 import java.net.ServerSocket;
 import java.net.Socket;
 
-import Classes.Joueur;
-
 
 public class Server extends ServerSocket implements Runnable {
 	private int numport;
@@ -16,10 +14,11 @@ public class Server extends ServerSocket implements Runnable {
 		// TODO Auto-generated constructor stub
 	}
 
+	@SuppressWarnings("unused")
 	public Server(int arg0) throws IOException {
 		super(1234);
+		@SuppressWarnings("resource")
 		final Server serv= this;
-		@SuppressWarnings("unused")
 		Thread t = new Thread();
 	}
 	
