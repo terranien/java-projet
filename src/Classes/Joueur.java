@@ -3,7 +3,7 @@ package Classes;
 import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 
-public class Joueur extends Mots {
+public class Joueur extends Mots implements Runnable{
 	private String pseudo;
 	private String Mot_choisi;
 
@@ -44,6 +44,12 @@ public String choixmots(){
 
 	public void setMot_choisi(String mot_choisi) {
 		Mot_choisi = mot_choisi;
+	}
+
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+		
 	}
 
 	
