@@ -4,6 +4,8 @@ import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 import java.awt.GridLayout;
 import java.awt.Insets;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
@@ -87,6 +89,12 @@ public class Accueil extends javax.swing.JFrame {
 				Pseudo = new JButton();
 				getContentPane().add(Pseudo, new GridBagConstraints(1, 1, 1, 1, 0.0, 0.0, GridBagConstraints.CENTER, GridBagConstraints.HORIZONTAL, new Insets(0, 0, 0, 0), 0, 0));
 				Pseudo.setText("pseudo");
+				Pseudo.addActionListener(new ActionListener() {
+					public void actionPerformed(ActionEvent evt) {
+						System.out.println("Pseudo.actionPerformed, event="+evt);
+						//TODO add your code for Pseudo.actionPerformed
+					}
+				});
 			    //Joueur.setPseudo(Pseudo);
 				String pseudo= new String();
 				pseudo= JOptionPane.showInputDialog("entrer le pseudo du joueur");
