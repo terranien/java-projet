@@ -11,7 +11,7 @@ import java.net.UnknownHostException;
 import Classes.Joueur;
 
 
-public class Client extends Socket {
+public class Client extends Socket implements Runnable {
 private int numport;
 ObjectOutputStream oos;
 	public Client() {
@@ -65,6 +65,16 @@ ObjectOutputStream oos;
 
 	public void setNumport(int numport) {
 		this.numport = numport;
+	}
+
+	@Override
+	public void run() {
+		Joueur joueur= new Joueur();
+		 joueur.choixmots();
+		 
+		Joueur joueur2= new Joueur();
+		joueur2.entrer_mots();
+		
 	}
 
 }

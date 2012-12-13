@@ -6,6 +6,8 @@ import javax.swing.JTextField;
 public class Joueur extends Mots implements Runnable{
 	private String pseudo;
 	private String Mot_choisi;
+	private int nummax=5;
+	private String lettres;
 
 	public Joueur() {
 		// TODO Auto-generated constructor stub
@@ -26,6 +28,19 @@ public class Joueur extends Mots implements Runnable{
 
 	public static void setPseudo(JTextField pseudo2) {
 		// TODO Auto-generated method stub
+		
+	}
+	public boolean entrer_mots(){
+		
+		for (int j = 0; j < nummax; j++) {
+			lettres=  JOptionPane.showInputDialog(null, "entrer la lettre que vous avez choisi.");
+			if (lettres==Mot_choisi) return isTrouve();
+		}
+		return false;
+		
+		
+		
+		
 		
 	}
 public String choixmots(){
@@ -50,6 +65,22 @@ public String choixmots(){
 	public void run() {
 		choixmots();
 		
+	}
+
+	public int getNummax() {
+		return nummax;
+	}
+
+	public void setNummax(int nummax) {
+		this.nummax = nummax;
+	}
+
+	public String getLettres() {
+		return lettres;
+	}
+
+	public void setLettres(String lettres) {
+		this.lettres = lettres;
 	}
 
 	
