@@ -6,6 +6,7 @@ import java.awt.GridLayout;
 import java.awt.Insets;
 import javax.swing.JButton;
 import javax.swing.JOptionPane;
+import javax.swing.JPanel;
 import javax.swing.JTextField;
 
 import javax.swing.WindowConstants;
@@ -33,7 +34,7 @@ public class Accueil extends javax.swing.JFrame {
 	private static final long serialVersionUID = 4634064151056960285L;
 	private JButton jButton1;
 	private JButton Jeux;
-	private JTextField Pseudo;
+	private JButton Pseudo;
 	private JTextField Accueil;
 	private JButton Regles;
 
@@ -83,8 +84,8 @@ public class Accueil extends javax.swing.JFrame {
 				Accueil.setText("jeu du pendu");
 			}
 			{
-				Pseudo = new JTextField();
-				getContentPane().add(Pseudo, new GridBagConstraints(1, 1, 1, 1, 0.0, 0.0, GridBagConstraints.CENTER, GridBagConstraints.NONE, new Insets(0, 0, 0, 0), 0, 0));
+				Pseudo = new JButton();
+				getContentPane().add(Pseudo, new GridBagConstraints(1, 1, 1, 1, 0.0, 0.0, GridBagConstraints.CENTER, GridBagConstraints.HORIZONTAL, new Insets(0, 0, 0, 0), 0, 0));
 				Pseudo.setText("pseudo");
 			    //Joueur.setPseudo(Pseudo);
 				String pseudo= new String();
