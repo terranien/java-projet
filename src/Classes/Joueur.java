@@ -48,6 +48,11 @@ public String choixmots(){
 	return Mot_choisi;
 	
 }
+public int score(int po){
+	System.out.println("le score est :" +po);
+	return po;
+	
+}
 	@Override
 	public String  toString() {
 		return "Joueur [pseudo=" + pseudo + "]";
