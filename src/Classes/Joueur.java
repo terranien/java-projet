@@ -91,6 +91,12 @@ public int score(int po){
 		this.lettres = lettres;
 	}
 
+	public void InputMethodListener() {
+		pseudo = JOptionPane.showInputDialog("entrer le pseudo du joueur");
+	}
+		
+	
+
 	
 /*public static void main(String args[]){
 Thread t1= new Thread(new Runnable() {

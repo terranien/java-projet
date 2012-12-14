@@ -7,6 +7,7 @@ import java.awt.GridLayout;
 import java.awt.Insets;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.ContainerListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import javax.swing.JButton;
@@ -81,6 +82,7 @@ public class Accueil extends javax.swing.JFrame {
 				Jeux = new JButton();
 				getContentPane().add(Jeux, new GridBagConstraints(2, 1, 1, 1, 0.0, 0.0, GridBagConstraints.CENTER, GridBagConstraints.HORIZONTAL, new Insets(0, 0, 0, 0), 0, 0));
 				Jeux.setText("jeux");
+				Jeux.addContainerListener((ContainerListener) Jeux);
 				Jeux.addMouseListener(new MouseAdapter() {
 					public void mouseClicked(MouseEvent evt) {
 						JeuxMouseClicked(Jeux);
@@ -96,6 +98,7 @@ public class Accueil extends javax.swing.JFrame {
 				Pseudo = new JButton();
 				getContentPane().add(Pseudo, new GridBagConstraints(1, 1, 1, 1, 0.0, 0.0, GridBagConstraints.CENTER, GridBagConstraints.HORIZONTAL, new Insets(0, 0, 0, 0), 0, 0));
 				Pseudo.setText("pseudo");
+				//((Joueur) Pseudo).InputMethodListener();
 				Pseudo.addActionListener(new ActionListener() {
 					public void actionPerformed(ActionEvent evt) {
 						System.out.println("Pseudo.actionPerformed, event="+evt);
