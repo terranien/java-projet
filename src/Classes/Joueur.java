@@ -30,7 +30,7 @@ public class Joueur extends Mots implements Runnable{
 		// TODO Auto-generated method stub
 		
 	}
-	public boolean entrer_mots(){
+	public  boolean entrer_mots(){
 		
 		for (int j = 0; j < nummax; j++) {
 			lettres=  JOptionPane.showInputDialog(null, "entrer la lettre que vous avez choisi.");

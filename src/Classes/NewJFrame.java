@@ -1,10 +1,9 @@
 package Classes;
+import java.awt.BorderLayout;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
-import java.awt.GridLayout;
 import java.awt.Insets;
-import javax.swing.JMenu;
-import javax.swing.JMenuBar;
+import javax.swing.JPanel;
 import javax.swing.JTextField;
 
 import javax.swing.WindowConstants;
@@ -23,9 +22,9 @@ import javax.swing.SwingUtilities;
 * THIS MACHINE, SO JIGLOO OR THIS CODE CANNOT BE USED
 * LEGALLY FOR ANY CORPORATE OR COMMERCIAL PURPOSE.
 */
-public class Jeux extends javax.swing.JFrame {
-	private JTextField entrelettre;
-	private JTextField lettres;
+public class NewJFrame extends javax.swing.JFrame {
+	private JPanel jPanel1;
+	private JTextField jTextField1;
 
 	/**
 	* Auto-generated main method to display this JFrame
@@ -33,40 +32,38 @@ public class Jeux extends javax.swing.JFrame {
 	public static void main(String[] args) {
 		SwingUtilities.invokeLater(new Runnable() {
 			public void run() {
-				Jeux inst = new Jeux();
+				NewJFrame inst = new NewJFrame();
 				inst.setLocationRelativeTo(null);
 				inst.setVisible(true);
 			}
 		});
 	}
 	
-	public Jeux() {
+	public NewJFrame() {
 		super();
 		initGUI();
 	}
 	
 	private void initGUI() {
 		try {
-			GridBagLayout thisLayout = new GridBagLayout();
-			thisLayout.rowWeights = new double[] {0.0, 0.1, 0.1, 0.1, 0.1, 0.1};
-			thisLayout.rowHeights = new int[] {64, 7, 7, 20, 20, 7};
-			thisLayout.columnWeights = new double[] {0.0, 0.1, 0.1, 0.1};
-			thisLayout.columnWidths = new int[] {101, 7, 7, 7};
 			setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
-			getContentPane().setLayout(thisLayout);
 			{
-				entrelettre = new JTextField();
-				getContentPane().add(entrelettre, new GridBagConstraints(0, 4, 1, 1, 0.0, 0.0, GridBagConstraints.CENTER, GridBagConstraints.NONE, new Insets(0, 0, 0, 0), 0, 0));
-				entrelettre.setText("Entrer les lettres choisies.");
-			}
-			{
-				lettres = new JTextField();
-				getContentPane().add(lettres, new GridBagConstraints(1, 4, 1, 1, 0.0, 0.0, GridBagConstraints.CENTER, GridBagConstraints.HORIZONTAL, new Insets(0, 0, 0, 0), 0, 0));
-			    
-			
+				jPanel1 = new JPanel();
+				GridBagLayout jPanel1Layout = new GridBagLayout();
+				jPanel1Layout.columnWidths = new int[] {7, 7, 7, 7};
+				jPanel1Layout.rowHeights = new int[] {7, 7, 7, 7};
+				jPanel1Layout.columnWeights = new double[] {0.1, 0.1, 0.1, 0.1};
+				jPanel1Layout.rowWeights = new double[] {0.1, 0.1, 0.1, 0.1};
+				getContentPane().add(jPanel1, BorderLayout.CENTER);
+				jPanel1.setLayout(jPanel1Layout);
+				{
+					jTextField1 = new JTextField();
+					jPanel1.add(jTextField1, new GridBagConstraints(2, 2, 1, 1, 0.0, 0.0, GridBagConstraints.CENTER, GridBagConstraints.HORIZONTAL, new Insets(0, 0, 0, 0), 0, 0));
+					//jTextField1.addKeyListener()
+				}
 			}
 			pack();
-			setSize(500,500);
+			setSize(400, 300);
 		} catch (Exception e) {
 		    //add your error handling code here
 			e.printStackTrace();

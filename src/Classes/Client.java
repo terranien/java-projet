@@ -73,7 +73,7 @@ ObjectOutputStream oos;
 		 
 		Joueur joueur2= new Joueur();
 		joueur2.entrer_mots();
-		
+	
 	}
 
 }
