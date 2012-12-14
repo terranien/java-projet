@@ -3,6 +3,8 @@ import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 import java.awt.GridLayout;
 import java.awt.Insets;
+
+import javax.swing.JLabel;
 import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JTextField;
@@ -24,7 +26,7 @@ import javax.swing.SwingUtilities;
 * LEGALLY FOR ANY CORPORATE OR COMMERCIAL PURPOSE.
 */
 public class Jeux extends javax.swing.JFrame {
-	private JTextField entrelettre;
+	private JLabel entrelettre;
 	private JTextField lettres;
 
 	/**
@@ -55,13 +57,13 @@ public class Jeux extends javax.swing.JFrame {
 			setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
 			getContentPane().setLayout(thisLayout);
 			{
-				entrelettre = new JTextField();
+				entrelettre = new JLabel();
 				getContentPane().add(entrelettre, new GridBagConstraints(0, 4, 1, 1, 0.0, 0.0, GridBagConstraints.CENTER, GridBagConstraints.NONE, new Insets(0, 0, 0, 0), 0, 0));
 				entrelettre.setText("Entrer les lettres choisies.");
 			}
 			{
 				lettres = new JTextField();
-				getContentPane().add(lettres, new GridBagConstraints(1, 4, 1, 1, 0.0, 0.0, GridBagConstraints.CENTER, GridBagConstraints.HORIZONTAL, new Insets(0, 0, 0, 0), 0, 0));
+				getContentPane().add(lettres, new GridBagConstraints(2, 4, 1, 1, 0.0, 0.0, GridBagConstraints.CENTER, GridBagConstraints.HORIZONTAL, new Insets(0, 0, 0, 0), 0, 0));
 			    
 			
 			}
