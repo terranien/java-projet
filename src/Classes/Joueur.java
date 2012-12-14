@@ -25,11 +25,14 @@ public class Joueur extends Mots implements Runnable{
 		this.pseudo = pseudo;
 		pseudo = JOptionPane.showInputDialog("entrer le pseudo du joueur");
 	}
+	
 
+	
 	public static void setPseudo(JTextField pseudo2) {
 		// TODO Auto-generated method stub
 		
 	}
+	
 	public  boolean entrer_mots(){
 		
 		for (int j = 0; j < nummax; j++) {
@@ -89,7 +92,36 @@ public int score(int po){
 	}
 
 	
+/*public static void main(String args[]){
+Thread t1= new Thread(new Runnable() {
+		
+		@Override
+		public void run() {
+			Joueur joueur= new Joueur();
+			 joueur.choixmots();
+			 
+			Joueur joueur2= new Joueur();
+			joueur2.entrer_mots();
+			
+		}
+	});
 
+t1.start();
+
+Thread t2= new Thread(new Runnable() {
+	
+	@Override
+	public void run() {
+		Joueur joueur2= new Joueur();
+		 joueur2.choixmots();
+		 
+		Joueur joueur=new Joueur();
+		joueur.entrer_mots();
+		
+	}
+});
+t2.start();
+}*/
 	
 	
 

@@ -7,6 +7,8 @@ import java.awt.GridLayout;
 import java.awt.Insets;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 import javax.swing.JButton;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
@@ -79,6 +81,11 @@ public class Accueil extends javax.swing.JFrame {
 				Jeux = new JButton();
 				getContentPane().add(Jeux, new GridBagConstraints(2, 1, 1, 1, 0.0, 0.0, GridBagConstraints.CENTER, GridBagConstraints.HORIZONTAL, new Insets(0, 0, 0, 0), 0, 0));
 				Jeux.setText("jeux");
+				Jeux.addMouseListener(new MouseAdapter() {
+					public void mouseClicked(MouseEvent evt) {
+						JeuxMouseClicked(Jeux);
+					}
+				});
 			}
 			{
 				Accueil = new JTextField();
@@ -109,6 +116,11 @@ public class Accueil extends javax.swing.JFrame {
 	
 	public JButton getRegles() {
 		return Regles;
+	}
+	
+	private void JeuxMouseClicked(JButton jeux2) {
+		System.out.println("Jeux.mouseClicked, event="+jeux2);
+		
 	}
 
 }
