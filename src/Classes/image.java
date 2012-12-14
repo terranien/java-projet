@@ -1,4 +1,4 @@
-package Interface_graphique;
+package Classes;
 
 import java.awt.Dimension;
 import java.awt.GridBagConstraints;

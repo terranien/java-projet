@@ -1,4 +1,4 @@
-package Reseau;
+package Classes;
 import java.io.IOException;
 import java.io.ObjectOutputStream;
 import java.net.InetAddress;
@@ -8,7 +8,6 @@ import java.net.SocketException;
 import java.net.SocketImpl;
 import java.net.UnknownHostException;
 
-import Classes.Joueur;
 
 
 public class Client extends Socket implements Runnable {

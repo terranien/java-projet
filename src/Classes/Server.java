@@ -1,10 +1,9 @@
-package Reseau;
+package Classes;
 import java.io.IOException;
 import java.net.InetAddress;
 import java.net.ServerSocket;
 import java.net.Socket;
 
-import Classes.Joueur;
 
 
 public class Server extends ServerSocket implements Runnable {

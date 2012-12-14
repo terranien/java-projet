@@ -1,4 +1,5 @@
-package Interface_graphique;
+package Classes;
+
 import java.awt.BorderLayout;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
@@ -14,7 +15,6 @@ import javax.swing.JTextField;
 import javax.swing.WindowConstants;
 import javax.swing.SwingUtilities;
 
-import Classes.Joueur;
 
 
 /**
