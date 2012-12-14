@@ -3,6 +3,7 @@ import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 import java.awt.GridLayout;
 import java.awt.Insets;
+import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
 import javax.swing.JLabel;
@@ -26,7 +27,7 @@ import javax.swing.SwingUtilities;
 * THIS MACHINE, SO JIGLOO OR THIS CODE CANNOT BE USED
 * LEGALLY FOR ANY CORPORATE OR COMMERCIAL PURPOSE.
 */
-public class Jeux extends javax.swing.JFrame {
+public class Jeux extends javax.swing.JFrame implements KeyListener {
 	private JLabel entrelettre;
 	private JTextField lettres;
 	KeyListener ecoute;
@@ -78,6 +79,24 @@ public class Jeux extends javax.swing.JFrame {
 		    //add your error handling code here
 			e.printStackTrace();
 		}
+	}
+
+	@Override
+	public void keyPressed(KeyEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void keyReleased(KeyEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void keyTyped(KeyEvent e) {
+		//Joueur.entrer_mots();
+		
 	}
 
 }
