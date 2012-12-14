@@ -3,6 +3,7 @@ import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 import java.awt.GridLayout;
 import java.awt.Insets;
+import java.awt.event.KeyListener;
 
 import javax.swing.JLabel;
 import javax.swing.JMenu;
@@ -28,6 +29,9 @@ import javax.swing.SwingUtilities;
 public class Jeux extends javax.swing.JFrame {
 	private JLabel entrelettre;
 	private JTextField lettres;
+	KeyListener ecoute;
+	
+	
 
 	/**
 	* Auto-generated main method to display this JFrame
@@ -64,8 +68,9 @@ public class Jeux extends javax.swing.JFrame {
 			{
 				lettres = new JTextField();
 				getContentPane().add(lettres, new GridBagConstraints(2, 4, 1, 1, 0.0, 0.0, GridBagConstraints.CENTER, GridBagConstraints.HORIZONTAL, new Insets(0, 0, 0, 0), 0, 0));
-			    
-			
+				lettres.addKeyListener((KeyListener) ecoute);
+				//Joueur.entrer_mots();
+
 			}
 			pack();
 			setSize(500,500);
