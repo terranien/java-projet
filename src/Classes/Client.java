@@ -65,10 +65,12 @@ ObjectOutputStream oos;
 
 	@Override
 	public void run() {
+		
 		Joueur joueur= new Joueur();
-		 joueur.choixmots();
-		 
 		Joueur joueur2= new Joueur();
+		//joueur.setPseudo(null);
+		
+		joueur.choixmots();
 		joueur2.entrer_mots();
 	
 	}
