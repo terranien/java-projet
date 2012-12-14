@@ -1,4 +1,4 @@
-package Principale;
+package Classes;
 
 
 public class Pendu {
