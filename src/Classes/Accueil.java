@@ -95,6 +95,7 @@ public class Accueil extends javax.swing.JFrame {
 				Accueil = new JTextField();
 				getContentPane().add(Accueil, new GridBagConstraints(1, 0, 1, 1, 0.0, 0.0, GridBagConstraints.CENTER, GridBagConstraints.BOTH, new Insets(0, 0, 0, 0), 0, 0));
 				Accueil.setText("jeu du pendu");
+				setVisible(true);
 			}
 			{
 				Pseudo = new JButton();
