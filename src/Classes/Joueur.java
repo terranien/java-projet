@@ -37,7 +37,7 @@ public class Joueur extends Mots implements Runnable{
 		
 		for (int j = 0; j < nummax; j++) {
 			lettres=  JOptionPane.showInputDialog(null, "entrer la lettre que vous avez choisi.");
-			if (lettres==Mot_choisi) return isTrouve();
+			if (lettres==Mot_choisi ) return isTrouve();
 		}
 		return false;
 		
