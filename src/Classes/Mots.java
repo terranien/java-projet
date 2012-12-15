@@ -1,15 +1,16 @@
 package Classes;
 
 public class Mots  {
-private String tabmot[] [];
+private int nbalea;
+private String[] tabmot ;
 private int compte_point;
  private boolean trouve ;
 
-public String[][] getTabmot() {
+public String[] getTabmot() {
 	return tabmot;
 }
 
-public void setTabmot(String tabmot[][]) {
+public void setTabmot(String[] tabmot) {
 	this.tabmot = tabmot;
 }
 
@@ -33,6 +34,14 @@ public boolean isTrouve() {
 
 public void setTrouve(boolean trouve) {
 	this.trouve = trouve;
+}
+
+public int getNbalea() {
+	return nbalea;
+}
+
+public void setNbalea(int nbalea) {
+	this.nbalea = nbalea;
 }
 
 
