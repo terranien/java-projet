@@ -21,8 +21,8 @@ public class Joueur extends Mots implements Runnable{
 		return pseudo;
 	}
 
-	public void setPseudo(String pseudo) {
-		this.pseudo = pseudo;
+	public static void setPseudo(String pseudo) {
+		//this.pseudo = pseudo;
 		pseudo = JOptionPane.showInputDialog("entrer le pseudo du joueur");
 	}
 	

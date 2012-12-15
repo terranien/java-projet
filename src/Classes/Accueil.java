@@ -76,12 +76,14 @@ public class Accueil extends javax.swing.JFrame {
 				Regles = new JButton();
 				getContentPane().add(getRegles(), new GridBagConstraints(0, 1, 1, 1, 0.0, 0.0, GridBagConstraints.CENTER, GridBagConstraints.BOTH, new Insets(0, 0, 0, 0), 0, 0));
 				Regles.setText("Regles");
-				//((Object) Regles).afficheregles();
+				Regles.addActionListener((ActionListener) this);
+				
 			}
 			{
 				Jeux = new JButton();
 				getContentPane().add(Jeux, new GridBagConstraints(2, 1, 1, 1, 0.0, 0.0, GridBagConstraints.CENTER, GridBagConstraints.HORIZONTAL, new Insets(0, 0, 0, 0), 0, 0));
 				Jeux.setText("jeux");
+				setVisible(true);
 				Jeux.addContainerListener((ContainerListener) Jeux);
 				Jeux.addMouseListener(new MouseAdapter() {
 					public void mouseClicked(MouseEvent evt) {
@@ -100,10 +102,10 @@ public class Accueil extends javax.swing.JFrame {
 				Pseudo.setText("pseudo");
 				//((Joueur) Pseudo).InputMethodListener();
 				Pseudo.addActionListener(new ActionListener() {
-					public void actionPerformed(ActionEvent evt) {
-						System.out.println("Pseudo.actionPerformed, event="+evt);
-						//TODO add your code for Pseudo.actionPerformed
-					}
+					public void actionPerformed(ActionEvent y) {
+						System.out.println("Pseudo.actionPerformed, event="+y);
+						 String pseudo2 = null;
+						Joueur.setPseudo(pseudo2);					}
 				});
 			    //Joueur.setPseudo(Pseudo);
 				String pseudo= new String();
@@ -125,5 +127,16 @@ public class Accueil extends javax.swing.JFrame {
 		System.out.println("Jeux.mouseClicked, event="+jeux2);
 		
 	}
+ private void actionPerformed(ActionEvent evt){
+	 if (evt.getActionCommand().equals("Regles")){
+		 System.out.println("Lobjectif du jeu est de découvrir un mot en devinant les lettres qui le composent.");
+			System.out.println("Chaque joueur disposera du même mot à découvrir le plus rapidement possible.");
+			System.out.println("Si le joueur découvre une lettre qui correspond au mot, celle-ci sera affichée et placée au bon endroit dans le mot.");
+			System.out.println("Si la lettre est fausse, un croquis représentant un corps humain pendu sera peu à peu formé. Dès que le corps entier est formé, le joueur perd.");
+			
+	 }
+	 		
+ }
+
 
 }
