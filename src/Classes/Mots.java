@@ -3,14 +3,16 @@ package Classes;
 import java.util.ArrayList;
 
 public class Mots  {
-private int nbalea;
+//private int nbalea;
 private String[] tabmot = null ;
 private int compte_point;
 private boolean trouve ;
-char tableau[];
+private char tableau[];
+private char lettreJoueur;
 
 public void cretab(){
 	tableau = tabmot.toCharArray(); 
+   // Création du tableau grâce au site: http://www.commentcamarche.net/forum/affich-773735-java-transformation-d-une-string
 }
 
 
@@ -53,7 +55,8 @@ public void setNbalea(int nbalea) {
 }
 
 public int longueurMot(int len){
-	
+	int len =tabmot.length();
+	return len; 
 }
 
 public void testMot(){
