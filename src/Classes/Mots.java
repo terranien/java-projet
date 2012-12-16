@@ -1,10 +1,18 @@
 package Classes;
 
+import java.util.ArrayList;
+
 public class Mots  {
 private int nbalea;
-private String[] tabmot ;
+private String[] tabmot = null ;
 private int compte_point;
- private boolean trouve ;
+private boolean trouve ;
+char tableau[];
+
+public void cretab(){
+	tableau = tabmot.toCharArray(); 
+}
+
 
 public String[] getTabmot() {
 	return tabmot;
@@ -42,6 +50,14 @@ public int getNbalea() {
 
 public void setNbalea(int nbalea) {
 	this.nbalea = nbalea;
+}
+
+public int longueurMot(int len){
+	
+}
+
+public void testMot(){
+	 
 }
 
 
