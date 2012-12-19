@@ -88,7 +88,9 @@ public boolean isCorrect2(boolean memeLettre2){
     }
 	return memeLettre2;
 }//Boucle pour vérifié si la lettre entrée a déjà été entrée dans le tableau des lettres fausses tabVerif
-
+/**
+ * return si la lettre est vrai ou pas.
+ */
 public void testMot(){
 	int i;
 	lettreJoueur=Console.readLine("Votre lettre? ").toLowerCase().charAt(0);
