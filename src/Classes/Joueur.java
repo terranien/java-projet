@@ -1,5 +1,8 @@
 package Classes;
 
+import java.io.Serializable;
+
+import javax.swing.JButton;
 import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 
@@ -93,6 +96,11 @@ public int score(int po){
 
 	public void InputMethodListener() {
 		pseudo = JOptionPane.showInputDialog("entrer le pseudo du joueur");
+	}
+
+	public static void setPseudo(Serializable pseudo2) {
+		pseudo2 = JOptionPane.showInputDialog("entrer le pseudo du joueur");
+		
 	}
 		
 	

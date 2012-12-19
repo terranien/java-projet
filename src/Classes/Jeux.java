@@ -69,7 +69,7 @@ public class Jeux extends javax.swing.JFrame implements KeyListener {
 			{
 				lettres = new JTextField();
 				getContentPane().add(lettres, new GridBagConstraints(2, 4, 1, 1, 0.0, 0.0, GridBagConstraints.CENTER, GridBagConstraints.HORIZONTAL, new Insets(0, 0, 0, 0), 0, 0));
-				lettres.addKeyListener((KeyListener) ecoute);
+				lettres.addKeyListener(ecoute);
 				//Joueur.entrer_mots();
 
 			}

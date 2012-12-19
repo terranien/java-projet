@@ -1,6 +1,7 @@
 package Classes;
 
 import java.awt.BorderLayout;
+import java.awt.FlowLayout;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 import java.awt.GridLayout;
@@ -8,11 +9,14 @@ import java.awt.Insets;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.ContainerListener;
+import java.awt.event.InputMethodEvent;
+import java.awt.event.InputMethodListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import javax.swing.JButton;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
+import javax.swing.JTextArea;
 import javax.swing.JTextField;
 
 import javax.swing.WindowConstants;
@@ -32,14 +36,16 @@ import javax.swing.SwingUtilities;
 * THIS MACHINE, SO JIGLOO OR THIS CODE CANNOT BE USED
 * LEGALLY FOR ANY CORPORATE OR COMMERCIAL PURPOSE.
 */
-public class Accueil extends javax.swing.JFrame {
+public class Accueil extends javax.swing.JFrame implements InputMethodListener {
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 4634064151056960285L;
 	private JButton jButton1;
-	private JButton Jeux;
-	private JButton Pseudo;
+	private JButton pseu2;
+	private JButton pseu;
+	private JPanel Pseudo;
+	private JTextArea Pesudo;
 	private JTextField Accueil;
 	private JButton Regles;
 
@@ -49,19 +55,23 @@ public class Accueil extends javax.swing.JFrame {
 	public static void main(String[] args) {
 		SwingUtilities.invokeLater(new Runnable() {
 			public void run() {
-				Accueil inst = new Accueil();
+				Accueil inst = new Accueil(null);
 				inst.setLocationRelativeTo(null);
 				inst.setVisible(true);
 			}
 		});
 	}
 	
-	public Accueil() {
+	public Accueil(JButton Pseudo) {
 		super();
-		initGUI();
+		initGUI(Pseudo);
 	}
 	
-	private void initGUI() {
+	private void initGUI(JButton pseudo2) {
+		// TODO Auto-generated method stub
+		
+	}
+	private void initGUI(JPanel pseudo2) {
 		try {
 			GridBagLayout thisLayout = new GridBagLayout();
 			thisLayout.rowWeights = new double[] {0.0, 0.1, 0.1, 0.1};
@@ -74,22 +84,10 @@ public class Accueil extends javax.swing.JFrame {
 			setVisible(true);
 			{
 				Regles = new JButton();
-				getContentPane().add(getRegles(), new GridBagConstraints(0, 1, 1, 1, 0.0, 0.0, GridBagConstraints.CENTER, GridBagConstraints.BOTH, new Insets(0, 0, 0, 0), 0, 0));
+				getContentPane().add(Regles, new GridBagConstraints(0, 1, 1, 1, 0.0, 0.0, GridBagConstraints.CENTER, GridBagConstraints.HORIZONTAL, new Insets(0, 0, 0, 0), 0, 0));
 				Regles.setText("Regles");
 				Regles.addActionListener((ActionListener) this);
 				
-			}
-			{
-				Jeux = new JButton();
-				getContentPane().add(Jeux, new GridBagConstraints(2, 1, 1, 1, 0.0, 0.0, GridBagConstraints.CENTER, GridBagConstraints.HORIZONTAL, new Insets(0, 0, 0, 0), 0, 0));
-				Jeux.setText("jeux");
-				setVisible(true);
-				Jeux.addContainerListener((ContainerListener) Jeux);
-				Jeux.addMouseListener(new MouseAdapter() {
-					public void mouseClicked(MouseEvent evt) {
-						JeuxMouseClicked(Jeux);
-					}
-				});
 			}
 			{
 				Accueil = new JTextField();
@@ -98,19 +96,23 @@ public class Accueil extends javax.swing.JFrame {
 				setVisible(true);
 			}
 			{
-				Pseudo = new JButton();
-				getContentPane().add(Pseudo, new GridBagConstraints(1, 1, 1, 1, 0.0, 0.0, GridBagConstraints.CENTER, GridBagConstraints.HORIZONTAL, new Insets(0, 0, 0, 0), 0, 0));
-				Pseudo.setText("pseudo");
-				//((Joueur) Pseudo).InputMethodListener();
-				Pseudo.addActionListener(new ActionListener() {
-					public void actionPerformed(ActionEvent y) {
-						System.out.println("Pseudo.actionPerformed, event="+y);
-						 String pseudo2 = null;
-						Joueur.setPseudo(pseudo2);					}
-				});
-			    //Joueur.setPseudo(Pseudo);
-				String pseudo= new String();
-				pseudo= JOptionPane.showInputDialog("entrer le pseudo du joueur");
+				pseudo2 = new JPanel();
+				FlowLayout PseudoLayout = new FlowLayout();
+				getContentPane().add(pseudo2, new GridBagConstraints(1, 1, 1, 1, 0.0, 0.0, GridBagConstraints.CENTER, GridBagConstraints.BOTH, new Insets(0, 0, 0, 0), 0, 0));
+				{
+					pseu = new JButton();
+					pseudo2.add(pseu);
+					pseu.setText("pseudo");
+				}
+				{
+					pseu2 = new JButton();
+					pseudo2.add(pseu2);
+					pseu2.setText("pseudo2");
+				}
+				pseudo2.setLayout(PseudoLayout);
+			}
+			{
+				
 			}
 
 			setSize(500, 500);
@@ -139,5 +141,20 @@ public class Accueil extends javax.swing.JFrame {
 	 		
  }
 
+@Override
+public void caretPositionChanged(InputMethodEvent arg0) {
+	// TODO Auto-generated method stub
+	
+}
+
+@Override
+public void inputMethodTextChanged(InputMethodEvent arg0) {
+	// TODO Auto-generated method stub
+	
+}
+
+public JPanel getPseudo() {
+	return Pseudo;
+}
 
 }
